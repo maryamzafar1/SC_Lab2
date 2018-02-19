@@ -1,0 +1,9 @@
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\bin\Debug\SoftwareConstructionLab2.exe.config
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\bin\Debug\SoftwareConstructionLab2.exe
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\bin\Debug\SoftwareConstructionLab2.pdb
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.Form1.resources
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.Main.resources
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.Properties.Resources.resources
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.csproj.GenerateResource.Cache
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.exe
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.pdb
