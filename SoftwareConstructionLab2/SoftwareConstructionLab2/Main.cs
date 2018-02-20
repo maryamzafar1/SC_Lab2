@@ -13,11 +13,17 @@ namespace SoftwareConstructionLab2
 {
     public partial class Main : Form
     {
+        string usr;
         OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Maryam\Documents\Visual Studio 2017\Projects\AppData.accdb");
+        public Main()
+        {
+            InitializeComponent();
+            user_session.Text = usr;
+        }
         public Main(string usernm, string passw)
         {
             InitializeComponent();
-            user_session.Text = usernm;
+            usr = usernm;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -28,6 +34,7 @@ namespace SoftwareConstructionLab2
             this.booksTableAdapter.Fill(this.appDataSet.Books);
             //user_session.Text = session.usernm;
             //MessageBox.Show(session.usernm);
+            user_session.Text = usr;
 
         }
 
@@ -79,6 +86,13 @@ namespace SoftwareConstructionLab2
             }
             conn.Close();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Search ss = new Search(this);
+            ss.Show();
         }
     }
 }
