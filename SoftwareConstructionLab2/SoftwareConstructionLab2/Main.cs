@@ -13,6 +13,7 @@ namespace SoftwareConstructionLab2
 {
     public partial class Main : Form
     {
+        
         string usr;
         OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Maryam\Documents\Visual Studio 2017\Projects\AppData.accdb");
         public Main()
@@ -45,13 +46,13 @@ namespace SoftwareConstructionLab2
             //int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["BookID"].Value.ToString());
             string id = dataGridView1["BookID", e.RowIndex].Value.ToString();
             //MessageBox.Show(id);
-            //Date today = Date.;
+            DateTime today = DateTime.Now;
             cmd.CommandType = CommandType.Text;
             //int fine = 0;
             cmd.CommandText = "insert into [issue]([user], [bookid],[fine]) VALUES (@usr,@bookid,@fine)";
             cmd.Parameters.AddWithValue("@usr", user_session.Text);
             cmd.Parameters.AddWithValue("@bookid", id);
-            //cmd.Parameters.AddWithValue("@issuedate");
+            cmd.Parameters.AddWithValue("@issuedate", today.ToString("yyyyMMdd"));
             cmd.Parameters.AddWithValue("@fine","0");
             cmd.Connection = conn;
             int a = cmd.ExecuteNonQuery();
@@ -70,13 +71,13 @@ namespace SoftwareConstructionLab2
             //int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["BookID"].Value.ToString());
             string id = dataGridView2["ArticleID", e.RowIndex].Value.ToString();
             //MessageBox.Show(id);
-            DateTime today = DateTime.Today;
+            DateTime today = DateTime.Now;
             cmd.CommandType = CommandType.Text;
             //int fine = 0;
             cmd.CommandText = "insert into [issue]([user], [bookid],[fine]) VALUES (@usr,@bookid,@fine)";
             cmd.Parameters.AddWithValue("@usr", user_session.Text);
             cmd.Parameters.AddWithValue("@bookid", id);
-            //cmd.Parameters.AddWithValue("@issuedate");
+            cmd.Parameters.AddWithValue("@issuedate", today.ToString("yyyyMMdd"));
             cmd.Parameters.AddWithValue("@fine", "0");
             cmd.Connection = conn;
             int a = cmd.ExecuteNonQuery();
@@ -93,6 +94,13 @@ namespace SoftwareConstructionLab2
             this.Hide();
             Search ss = new Search(this);
             ss.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+            
         }
     }
 }
