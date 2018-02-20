@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppDataSet.cs">
+      <DependentUpon>AppDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AppDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

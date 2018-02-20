@@ -7,3 +7,4 @@ C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\S
 C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.csproj.GenerateResource.Cache
 C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.exe
 C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.pdb
+C:\Users\Maryam\Documents\Visual Studio 2017\Projects\SoftwareConstructionLab2\SoftwareConstructionLab2\obj\Debug\SoftwareConstructionLab2.csprojResolveAssemblyReference.cache

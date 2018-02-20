@@ -36,7 +36,7 @@ namespace SoftwareConstructionLab2 {
         
         private global::System.Data.DataRelation relationBookIssue;
         
-        private global::System.Data.DataRelation relationUserIssue;
+        private global::System.Data.DataRelation relationUser_Issue;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -295,7 +295,7 @@ namespace SoftwareConstructionLab2 {
                 }
             }
             this.relationBookIssue = this.Relations["BookIssue"];
-            this.relationUserIssue = this.Relations["UserIssue"];
+            this.relationUser_Issue = this.Relations["User_Issue"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -320,10 +320,10 @@ namespace SoftwareConstructionLab2 {
                         this.tableArtifact.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableIssue.bookidColumn}, false);
             this.Relations.Add(this.relationBookIssue);
-            this.relationUserIssue = new global::System.Data.DataRelation("UserIssue", new global::System.Data.DataColumn[] {
-                        this.tableUser.IDColumn}, new global::System.Data.DataColumn[] {
+            this.relationUser_Issue = new global::System.Data.DataRelation("User_Issue", new global::System.Data.DataColumn[] {
+                        this.tableUser.usernameColumn}, new global::System.Data.DataColumn[] {
                         this.tableIssue.userColumn}, false);
-            this.Relations.Add(this.relationUserIssue);
+            this.Relations.Add(this.relationUser_Issue);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -960,7 +960,7 @@ namespace SoftwareConstructionLab2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public IssueRow AddIssueRow(UserRow parentUserRowByUserIssue, ArtifactRow parentArtifactRowByBookIssue, System.DateTime issuedate, int fine) {
+            public IssueRow AddIssueRow(UserRow parentUserRowByUser_Issue, ArtifactRow parentArtifactRowByBookIssue, System.DateTime issuedate, int fine) {
                 IssueRow rowIssueRow = ((IssueRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -968,8 +968,8 @@ namespace SoftwareConstructionLab2 {
                         null,
                         issuedate,
                         fine};
-                if ((parentUserRowByUserIssue != null)) {
-                    columnValuesArray[1] = parentUserRowByUserIssue[0];
+                if ((parentUserRowByUser_Issue != null)) {
+                    columnValuesArray[1] = parentUserRowByUser_Issue[1];
                 }
                 if ((parentArtifactRowByBookIssue != null)) {
                     columnValuesArray[2] = parentArtifactRowByBookIssue[0];
@@ -1015,7 +1015,7 @@ namespace SoftwareConstructionLab2 {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnuser = new global::System.Data.DataColumn("user", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnuser = new global::System.Data.DataColumn("user", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnuser);
                 this.columnbookid = new global::System.Data.DataColumn("bookid", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbookid);
@@ -2605,10 +2605,10 @@ namespace SoftwareConstructionLab2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int user {
+            public string user {
                 get {
                     try {
-                        return ((int)(this[this.tableIssue.userColumn]));
+                        return ((string)(this[this.tableIssue.userColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'user\' in table \'Issue\' is DBNull.", e);
@@ -2682,10 +2682,10 @@ namespace SoftwareConstructionLab2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public UserRow UserRow {
                 get {
-                    return ((UserRow)(this.GetParentRow(this.Table.ParentRelations["UserIssue"])));
+                    return ((UserRow)(this.GetParentRow(this.Table.ParentRelations["User_Issue"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["UserIssue"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["User_Issue"]);
                 }
             }
             
@@ -2822,11 +2822,11 @@ namespace SoftwareConstructionLab2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public IssueRow[] GetIssueRows() {
-                if ((this.Table.ChildRelations["UserIssue"] == null)) {
+                if ((this.Table.ChildRelations["User_Issue"] == null)) {
                     return new IssueRow[0];
                 }
                 else {
-                    return ((IssueRow[])(base.GetChildRows(this.Table.ChildRelations["UserIssue"])));
+                    return ((IssueRow[])(base.GetChildRows(this.Table.ChildRelations["User_Issue"])));
                 }
             }
         }

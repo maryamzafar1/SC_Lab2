@@ -308,7 +308,7 @@
   <xs:element name="AppDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AppDataSet" msprop:Generator_UserDSName="AppDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Artifact" msprop:Generator_TableClassName="ArtifactDataTable" msprop:Generator_TableVarName="tableArtifact" msprop:Generator_RowChangedName="ArtifactRowChanged" msprop:Generator_TablePropName="Artifact" msprop:Generator_RowDeletingName="ArtifactRowDeleting" msprop:Generator_RowChangingName="ArtifactRowChanging" msprop:Generator_RowEvHandlerName="ArtifactRowChangeEventHandler" msprop:Generator_RowDeletedName="ArtifactRowDeleted" msprop:Generator_RowClassName="ArtifactRow" msprop:Generator_UserTableName="Artifact" msprop:Generator_RowEvArgName="ArtifactRowChangeEvent">
+        <xs:element name="Artifact" msprop:Generator_TableClassName="ArtifactDataTable" msprop:Generator_TableVarName="tableArtifact" msprop:Generator_TablePropName="Artifact" msprop:Generator_RowDeletingName="ArtifactRowDeleting" msprop:Generator_RowChangingName="ArtifactRowChanging" msprop:Generator_RowEvHandlerName="ArtifactRowChangeEventHandler" msprop:Generator_RowDeletedName="ArtifactRowDeleted" msprop:Generator_UserTableName="Artifact" msprop:Generator_RowChangedName="ArtifactRowChanged" msprop:Generator_RowEvArgName="ArtifactRowChangeEvent" msprop:Generator_RowClassName="ArtifactRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -361,18 +361,18 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Issue" msprop:Generator_TableClassName="IssueDataTable" msprop:Generator_TableVarName="tableIssue" msprop:Generator_RowChangedName="IssueRowChanged" msprop:Generator_TablePropName="Issue" msprop:Generator_RowDeletingName="IssueRowDeleting" msprop:Generator_RowChangingName="IssueRowChanging" msprop:Generator_RowEvHandlerName="IssueRowChangeEventHandler" msprop:Generator_RowDeletedName="IssueRowDeleted" msprop:Generator_RowClassName="IssueRow" msprop:Generator_UserTableName="Issue" msprop:Generator_RowEvArgName="IssueRowChangeEvent">
+        <xs:element name="Issue" msprop:Generator_TableClassName="IssueDataTable" msprop:Generator_TableVarName="tableIssue" msprop:Generator_TablePropName="Issue" msprop:Generator_RowDeletingName="IssueRowDeleting" msprop:Generator_RowChangingName="IssueRowChanging" msprop:Generator_RowEvHandlerName="IssueRowChangeEventHandler" msprop:Generator_RowDeletedName="IssueRowDeleted" msprop:Generator_UserTableName="Issue" msprop:Generator_RowChangedName="IssueRowChanged" msprop:Generator_RowEvArgName="IssueRowChangeEvent" msprop:Generator_RowClassName="IssueRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:int" minOccurs="0" />
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
               <xs:element name="bookid" msprop:Generator_ColumnVarNameInTable="columnbookid" msprop:Generator_ColumnPropNameInRow="bookid" msprop:Generator_ColumnPropNameInTable="bookidColumn" msprop:Generator_UserColumnName="bookid" type="xs:int" minOccurs="0" />
               <xs:element name="issuedate" msprop:Generator_ColumnVarNameInTable="columnissuedate" msprop:Generator_ColumnPropNameInRow="issuedate" msprop:Generator_ColumnPropNameInTable="issuedateColumn" msprop:Generator_UserColumnName="issuedate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="fine" msprop:Generator_ColumnVarNameInTable="columnfine" msprop:Generator_ColumnPropNameInRow="fine" msprop:Generator_ColumnPropNameInTable="fineColumn" msprop:Generator_UserColumnName="fine" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="User" msprop:Generator_TableClassName="UserDataTable" msprop:Generator_TableVarName="tableUser" msprop:Generator_RowChangedName="UserRowChanged" msprop:Generator_TablePropName="User" msprop:Generator_RowDeletingName="UserRowDeleting" msprop:Generator_RowChangingName="UserRowChanging" msprop:Generator_RowEvHandlerName="UserRowChangeEventHandler" msprop:Generator_RowDeletedName="UserRowDeleted" msprop:Generator_RowClassName="UserRow" msprop:Generator_UserTableName="User" msprop:Generator_RowEvArgName="UserRowChangeEvent">
+        <xs:element name="User" msprop:Generator_TableClassName="UserDataTable" msprop:Generator_TableVarName="tableUser" msprop:Generator_TablePropName="User" msprop:Generator_RowDeletingName="UserRowDeleting" msprop:Generator_RowChangingName="UserRowChanging" msprop:Generator_RowEvHandlerName="UserRowChangeEventHandler" msprop:Generator_RowDeletedName="UserRowDeleted" msprop:Generator_UserTableName="User" msprop:Generator_RowChangedName="UserRowChanged" msprop:Generator_RowEvArgName="UserRowChangeEvent" msprop:Generator_RowClassName="UserRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -393,7 +393,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Books" msprop:Generator_TableClassName="BooksDataTable" msprop:Generator_TableVarName="tableBooks" msprop:Generator_RowChangedName="BooksRowChanged" msprop:Generator_TablePropName="Books" msprop:Generator_RowDeletingName="BooksRowDeleting" msprop:Generator_RowChangingName="BooksRowChanging" msprop:Generator_RowEvHandlerName="BooksRowChangeEventHandler" msprop:Generator_RowDeletedName="BooksRowDeleted" msprop:Generator_RowClassName="BooksRow" msprop:Generator_UserTableName="Books" msprop:Generator_RowEvArgName="BooksRowChangeEvent">
+        <xs:element name="Books" msprop:Generator_TableClassName="BooksDataTable" msprop:Generator_TableVarName="tableBooks" msprop:Generator_TablePropName="Books" msprop:Generator_RowDeletingName="BooksRowDeleting" msprop:Generator_RowChangingName="BooksRowChanging" msprop:Generator_RowEvHandlerName="BooksRowChangeEventHandler" msprop:Generator_RowDeletedName="BooksRowDeleted" msprop:Generator_UserTableName="Books" msprop:Generator_RowChangedName="BooksRowChanged" msprop:Generator_RowEvArgName="BooksRowChangeEvent" msprop:Generator_RowClassName="BooksRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -446,7 +446,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Journals" msprop:Generator_TableClassName="JournalsDataTable" msprop:Generator_TableVarName="tableJournals" msprop:Generator_RowChangedName="JournalsRowChanged" msprop:Generator_TablePropName="Journals" msprop:Generator_RowDeletingName="JournalsRowDeleting" msprop:Generator_RowChangingName="JournalsRowChanging" msprop:Generator_RowEvHandlerName="JournalsRowChangeEventHandler" msprop:Generator_RowDeletedName="JournalsRowDeleted" msprop:Generator_RowClassName="JournalsRow" msprop:Generator_UserTableName="Journals" msprop:Generator_RowEvArgName="JournalsRowChangeEvent">
+        <xs:element name="Journals" msprop:Generator_TableClassName="JournalsDataTable" msprop:Generator_TableVarName="tableJournals" msprop:Generator_TablePropName="Journals" msprop:Generator_RowDeletingName="JournalsRowDeleting" msprop:Generator_RowChangingName="JournalsRowChanging" msprop:Generator_RowEvHandlerName="JournalsRowChangeEventHandler" msprop:Generator_RowDeletedName="JournalsRowDeleted" msprop:Generator_UserTableName="Journals" msprop:Generator_RowChangedName="JournalsRowChanged" msprop:Generator_RowEvArgName="JournalsRowChangeEvent" msprop:Generator_RowClassName="JournalsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -524,8 +524,8 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="BookIssue" msdata:parent="Artifact" msdata:child="Issue" msdata:parentkey="ID" msdata:childkey="bookid" msprop:Generator_UserChildTable="Issue" msprop:Generator_ChildPropName="GetIssueRows" msprop:Generator_UserRelationName="BookIssue" msprop:Generator_RelationVarName="relationBookIssue" msprop:Generator_UserParentTable="Artifact" msprop:Generator_ParentPropName="ArtifactRow" />
-      <msdata:Relationship name="UserIssue" msdata:parent="User" msdata:child="Issue" msdata:parentkey="ID" msdata:childkey="user" msprop:Generator_UserChildTable="Issue" msprop:Generator_ChildPropName="GetIssueRows" msprop:Generator_UserRelationName="UserIssue" msprop:Generator_ParentPropName="UserRow" msprop:Generator_RelationVarName="relationUserIssue" msprop:Generator_UserParentTable="User" />
+      <msdata:Relationship name="BookIssue" msdata:parent="Artifact" msdata:child="Issue" msdata:parentkey="ID" msdata:childkey="bookid" msprop:Generator_UserChildTable="Issue" msprop:Generator_ChildPropName="GetIssueRows" msprop:Generator_UserRelationName="BookIssue" msprop:Generator_ParentPropName="ArtifactRow" msprop:Generator_RelationVarName="relationBookIssue" msprop:Generator_UserParentTable="Artifact" />
+      <msdata:Relationship name="User_Issue" msdata:parent="User" msdata:child="Issue" msdata:parentkey="username" msdata:childkey="user" msprop:Generator_UserChildTable="Issue" msprop:Generator_ChildPropName="GetIssueRows" msprop:Generator_UserRelationName="User_Issue" msprop:Generator_RelationVarName="relationUser_Issue" msprop:Generator_UserParentTable="User" msprop:Generator_ParentPropName="UserRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

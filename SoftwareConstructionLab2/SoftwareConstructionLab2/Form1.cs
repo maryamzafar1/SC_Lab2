@@ -64,10 +64,25 @@ namespace SoftwareConstructionLab2
                 conn.Open();
                 OleDbCommand cmd = new OleDbCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into [user](username)values(@usern)";
+                string queryString = "INSERT INTO [user]([username],[password]) VALUES(@nm,@pw);";
+                OleDbCommand comm = new OleDbCommand(queryString, conn);
+                comm.Parameters.AddWithValue("@nm", username.Text);
+                comm.Parameters.AddWithValue("@pw", password.Text);
+                //OleDbCommand cmd = new OleDbCommand();
+                //cmd.CommandText = "insert into [user](username,password) values(?,?)";
+                //cmd.Parameters.Add("?", OleDbType.VarChar).Value = username.Text;
+                //cmd.Parameters.Add("?", OleDbType.VarChar).Value = password.Text;
+
+                /////cmd.Parameters.AddWithValue("@nm", username.Text);
+                //cmd.Connection = con;
+                comm.ExecuteNonQuery();
+                MessageBox.Show("Data Inserted");
+                conn.Close();
+                /*
+                cmd.CommandText = "INSERT INTO [User] " +"Values('" + username.Text + "', '" + password.Text + "')";
                 //cmd.Parameters.AddWithValue("@id", 4);
                 cmd.Parameters.AddWithValue("@usern", username.Text);
-                //cmd.Parameters.AddWithValue("@pass", password.Text);
+                cmd.Parameters.AddWithValue("@pass", password.Text);
                 cmd.Connection = conn;
                 int a= cmd.ExecuteNonQuery();
 
@@ -77,10 +92,12 @@ namespace SoftwareConstructionLab2
                 }
                 //MessageBox.Show("Record Submitted", "Congrats");
                 conn.Close();
-
+                */
                 this.Hide();
+
                 Main main = new Main(username.Text, password.Text);
                 main.Show();
+                //this.Close();
 
             }
             catch (Exception ex)

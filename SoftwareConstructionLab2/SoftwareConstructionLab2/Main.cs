@@ -33,48 +33,52 @@ namespace SoftwareConstructionLab2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //conn.Open();
+            conn.Open();
             OleDbCommand cmd = new OleDbCommand();
             //int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["BookID"].Value.ToString());
             string id = dataGridView1["BookID", e.RowIndex].Value.ToString();
             //MessageBox.Show(id);
-            DateTime today = DateTime.Today;
+            //Date today = Date.;
             cmd.CommandType = CommandType.Text;
-           /* cmd.CommandText = "insert into [issue](user, bookid,issuedate,fine) VALUES (@usr,@bookid,@issuedate,@fine)";
+            //int fine = 0;
+            cmd.CommandText = "insert into [issue]([user], [bookid],[fine]) VALUES (@usr,@bookid,@fine)";
             cmd.Parameters.AddWithValue("@usr", user_session.Text);
             cmd.Parameters.AddWithValue("@bookid", id);
-            cmd.Parameters.AddWithValue("@issuedate",today);
-            cmd.Parameters.AddWithValue("@fine",0);
-            cmd.Connection = conn;*/
+            //cmd.Parameters.AddWithValue("@issuedate");
+            cmd.Parameters.AddWithValue("@fine","0");
+            cmd.Connection = conn;
             int a = cmd.ExecuteNonQuery();
             if (a > 0)
             {
                 MessageBox.Show("The Book has been issued!");
             }
+            conn.Close();
             
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //conn.Open();
+            conn.Open();
             OleDbCommand cmd = new OleDbCommand();
             //int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["BookID"].Value.ToString());
-            string id = dataGridView1["ArticleID", e.RowIndex].Value.ToString();
+            string id = dataGridView2["ArticleID", e.RowIndex].Value.ToString();
             //MessageBox.Show(id);
             DateTime today = DateTime.Today;
             cmd.CommandType = CommandType.Text;
-            /* cmd.CommandText = "insert into [issue](user, bookid,issuedate,fine) VALUES (@usr,@bookid,@issuedate,@fine)";
-             cmd.Parameters.AddWithValue("@usr", Form1.usernm);
-             cmd.Parameters.AddWithValue("@bookid", id);
-             cmd.Parameters.AddWithValue("@issuedate",today);
-             cmd.Parameters.AddWithValue("@fine",0);
-             cmd.Connection = conn;
-             int a = cmd.ExecuteNonQuery();
+            //int fine = 0;
+            cmd.CommandText = "insert into [issue]([user], [bookid],[fine]) VALUES (@usr,@bookid,@fine)";
+            cmd.Parameters.AddWithValue("@usr", user_session.Text);
+            cmd.Parameters.AddWithValue("@bookid", id);
+            //cmd.Parameters.AddWithValue("@issuedate");
+            cmd.Parameters.AddWithValue("@fine", "0");
+            cmd.Connection = conn;
+            int a = cmd.ExecuteNonQuery();
             if (a > 0)
             {
-                MessageBox.Show("The Book has been issued!");
+                MessageBox.Show("The Article has been issued!");
             }
-             */
+            conn.Close();
+
         }
     }
 }
